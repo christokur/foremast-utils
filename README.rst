@@ -126,3 +126,21 @@ To run the tests simply execute
     $ pip install -r requirements-dev.txt
 
     $ tox
+
+Notes
+=====
+
+Good
+----
+- pyproject
+- tox
+- github workflows
+- requirements.txt
+- tests dir
+- pytest
+
+Bad
+---
+
+- setup.py
+- setuptools
