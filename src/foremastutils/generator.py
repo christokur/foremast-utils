@@ -15,6 +15,7 @@
 #   limitations under the License.
 """Name generator."""
 import logging
+
 from foremastutils.formats import Formats
 
 

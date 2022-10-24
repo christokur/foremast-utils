@@ -4,3 +4,4 @@ pytest-pep8
 sphinx
 sphinxcontrib-napoleon
 tox
+isort

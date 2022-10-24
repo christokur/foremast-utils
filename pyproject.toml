@@ -1,3 +1,110 @@
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "foremast-utils"
+version = "2.0.0"
+description = ""
+authors = ["Christo De Lange <christo.delange@sands.com>"]
+readme = "README.rst"
+packages = [{include = "foremastutils", from = "src"}]
+classifiers=[
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Developers',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'License :: OSI Approved :: Apache Software License',
+    'Operating System :: OS Independent',
+]
+keywords=["naming","python","spinnaker","foremast","foremast-utils"]
+license='Apache License (2.0)'
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11.0"
+
+[tool.poetry.group.dev.dependencies]
+poetry = "~1.2.2"
+tox = "~3.26.0"
+docutils = "~0.18.1" # RST Preview
+Pygments = "~2.13.0" # RST Preview
+pip = "~22"
+black = "~22.10.0"
+isort = "~5.10.1"
+pydocstyle = {extras = ["toml"], version = "~6.1.1"}
+pytest = "~7.1.3"
+rstcheck = "~6.1.0"
+poethepoet = "~0.15.0"
+coverage = { extras = ["toml"], version = "~6.5.0" }
+pre-commit = "~2.20.0"
+poetry-plugin-bump2version = {git = "git@github.com:SandsB2B/poetry-plugin-bump2version.git", branch = "v0.4.0"}
+
+[tool.poetry_bump2version.options]
+list = true
+allow_dirty = true
+verbose = 0
+
+[tool.black]
+line-length = 120
+target-version = ['py39', 'py310']
+# 'force-exclude' excludes files or directories in addition to the defaults
+force-exclude = '(^/.github/*, ^/.vscode/*, .*\.tf)'
+
+[tool.flake8]
+max-line-length = 120
+extend-ignore = "E203"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.pydocstyle]
+convention = "google"
+add_select = "D401,D404"
+
+[tool.coverage.run]
+command_line = "-m pytest"
+source = ["poetry_bump2version"]
+parallel = true
+
+[tool.coverage.paths]
+source = [
+    "src/foremastutils",
+    "**/site-packages/foremastutils",
+]
+
+#[tool.tox]
+#legacy_tox_ini = """
+#"""
+
+[tool.poe.tasks.lint]
+shell = """
+python -m black --check src tests
+python -m isort --check-only src tests
+pydocstyle src
+rstcheck --report-level warning *.rst
+"""
+
+[tool.poe.tasks.test-cov]
+shell = """
+coverage run
+coverage combine
+coverage lcov -o coverage/lcov.info
+coverage report
+"""
+
+[tool.poe.tasks.check-lock]
+shell = "poetry lock --check | grep -v 'not consistent'"
+help = "poetry lock workaround for https://github.com/nat-n/poethepoet/issues/91"
+
+[tool.poe.tasks.pre-commit-install]
+shell = "pre-commit install"
+help = "Set up pre-commit hooks"
+
+[tool.poe.tasks.pre-commit-run]
+shell = "pre-commit run --all-files --show-diff-on-failure"
+help = "Run pre-commit hooks on all files"
