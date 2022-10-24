@@ -7,7 +7,7 @@ requires = [
 
 [tool.poetry]
 name = "foremast-utils"
-version = "2.0.1"
+version = "2.0.2"
 description = ""
 authors = ["Christo De Lange <christo.delange@sands.com>"]
 readme = "README.rst"
@@ -47,6 +47,8 @@ poetry-plugin-bump2version = {git = "git@github.com:SandsB2B/poetry-plugin-bump2
 [tool.poetry_bump2version.options]
 list = true
 allow_dirty = true
+tag = true
+commit = true
 verbose = 0
 
 [tool.black]
