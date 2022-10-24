@@ -40,14 +40,14 @@ class Parser(object):
         url = urlparse(self.url).path
 
         # handle git
-        url = url.split('.git')[0]
+        url = url.split(".git")[0]
 
-        if ':' in url:
-            url = url.split(':')[1]
+        if ":" in url:
+            url = url.split(":")[1]
 
         # Ony capture last two list items
         try:
-            project, repo = url.split('/')[-2:]
+            project, repo = url.split("/")[-2:]
         except ValueError:
             raise ParserError('"{}" is not a valid repository URL.'.format(self.url))
 
