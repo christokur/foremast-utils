@@ -11,7 +11,13 @@ jobs:
 #    strategy: [2022-10-24 Christo] This repo uses tox for the matrix
 #      matrix:
 #        python-version: [ "3.9", "3.10" ]
-
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
+      AWS_ACCOUNT_TOOLS: 433714148419
+      AWS_REGION_TOOLS: us-east-2
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.9
@@ -20,6 +26,60 @@ jobs:
       with:
         python-version: 3.9
         #cache: poetry
+    - id: install-aws-cli
+      uses: unfor19/install-aws-cli-action@v1.0.3
+      with:
+        version: 2     # default
+        verbose: false # default
+        arch: amd64    # allowed values: amd64, arm64
+        rootdir: ""    # defaults to "PWD"
+        workdir: ""    # defaults to "PWD/unfor19-awscli"
+
+    - name: Self-Configure AWS Credentials
+      continue-on-error: false
+      shell: bash
+      run: |
+        set +e
+        export PAGER=''
+        aws --version
+        set | grep '^(AWS_|GITHUB_|RUNNER_)'
+
+        aws sts get-caller-identity 2>&1
+
+        export AWS_PROFILE=b2b-master
+        aws configure set output json --profile=$AWS_PROFILE 2>&1
+        aws configure set region ${AWS_DEFAULT_REGION:-us-east-2} --profile=$AWS_PROFILE 2>&1
+        aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile=$AWS_PROFILE 2>&1
+        aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile=$AWS_PROFILE 2>&1
+        test -z "$AWS_SESSION_TOKEN" || aws configure set aws_session_token $AWS_SESSION_TOKEN --profile=$AWS_PROFILE 2>&1
+
+        export AWS_PROFILE=cloud-services-prod
+        aws configure set output json --profile=$AWS_PROFILE 2>&1
+        aws configure set region ${AWS_DEFAULT_REGION:-us-east-2} --profile=$AWS_PROFILE 2>&1
+        aws configure set role_arn arn:aws:iam::$AWS_ACCOUNT_TOOLS:role/github-terraform-pipelines --profile=$AWS_PROFILE 2>&1
+        aws configure set source_profile b2b-master --profile=$AWS_PROFILE 2>&1
+
+        aws configure list-profiles 2>&1
+
+    - name: Install poetry
+      run: |
+        echo python-path:'${{ steps.setup_python.outputs.python-path }}'
+        ${{ steps.setup_python.outputs.python-path }} --version
+        pipx install poetry --python ${{ steps.setup_python.outputs.python-path }} --force
+
+    - name: Set up access to CodeArtifact
+      run: |
+        set +e
+        export PAGER=''
+        export AWS_PROFILE=cloud-services-prod
+        aws sts get-caller-identity --profile=$AWS_PROFILE 2>&1
+        aws codeartifact login --tool pip --repository pypi --domain artifacts --domain-owner $AWS_ACCOUNT_TOOLS --profile=$AWS_PROFILE
+        AWS_CODEARTIFACT_GRE=$(aws codeartifact get-repository-endpoint --domain artifacts --domain-owner ${AWS_ACCOUNT_TOOLS} --profile ${AWS_PROFILE} --region ${AWS_REGION_TOOLS} --repository pypi --format pypi --query @.repositoryEndpoint --output text)
+        poetry config repo.tools ${AWS_CODEARTIFACT_GRE}
+        AWS_CODEARTIFACT_GAT=$(aws codeartifact get-authorization-token --domain artifacts --domain-owner ${AWS_ACCOUNT_TOOLS} --profile ${AWS_PROFILE} --region ${AWS_REGION_TOOLS} --query @.authorizationToken --output text)
+        poetry config http-basic.tools aws ${AWS_CODEARTIFACT_GAT}
+        set | egrep -e '^(POETRY|PYTHON|AWS)'; poetry config --list; set | grep POETRY || true
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip

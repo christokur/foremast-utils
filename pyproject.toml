@@ -25,6 +25,10 @@ classifiers=[
 keywords=["naming","python","spinnaker","foremast","foremast-utils"]
 license='Apache License (2.0)'
 
+[[tool.poetry.source]]
+name = "tools"
+url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple/"
+
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11.0"
 
@@ -42,7 +46,7 @@ rstcheck = "~6.1.0"
 poethepoet = "~0.15.0"
 coverage = { extras = ["toml"], version = "~6.5.0" }
 pre-commit = "~2.20.0"
-poetry-plugin-bump2version = {git = "git@github.com:SandsB2B/poetry-plugin-bump2version.git", branch = "v0.4.0"}
+poetry-plugin-bump2version = "v0.4.0"
 
 [tool.poetry_bump2version.options]
 list = true
