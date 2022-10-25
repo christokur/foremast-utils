@@ -65,7 +65,8 @@ jobs:
       run: |
         echo python-path:'${{ steps.setup_python.outputs.python-path }}'
         ${{ steps.setup_python.outputs.python-path }} --version
-        pipx install poetry --python ${{ steps.setup_python.outputs.python-path }} --force
+        ${{ steps.setup_python.outputs.python-path }} -m pip install poetry
+        pip install poetry
 
     - name: Set up access to CodeArtifact
       run: |
@@ -78,15 +79,22 @@ jobs:
         poetry config repo.tools ${AWS_CODEARTIFACT_GRE}
         AWS_CODEARTIFACT_GAT=$(aws codeartifact get-authorization-token --domain artifacts --domain-owner ${AWS_ACCOUNT_TOOLS} --profile ${AWS_PROFILE} --region ${AWS_REGION_TOOLS} --query @.authorizationToken --output text)
         poetry config http-basic.tools aws ${AWS_CODEARTIFACT_GAT}
+        poetry config http-basic.toolspublish aws ${AWS_CODEARTIFACT_GAT}
         set | egrep -e '^(POETRY|PYTHON|AWS)'; poetry config --list; set | grep POETRY || true
 
     - name: Install dependencies
       run: |
-        poetry env list
-        poetry env use ${{ matrix.python-version }}
+        #poetry env list
+        #poetry env use ${{ matrix.python-version }}
+        poetry env info
         poetry install --no-root --with dev --no-ansi --no-interaction
         #python -m pip install --upgrade pip
         #pip install -r requirements-dev.txt
 
     - name: Test with tox
-      run: tox
+      run: |
+        #poetry env list
+        #poetry env use ${{ matrix.python-version }}
+        poetry env info
+        pip list
+        tox

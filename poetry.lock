@@ -15,7 +15,7 @@ tests-no-zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy 
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "black"
@@ -39,11 +39,6 @@ d = ["aiohttp (>=3.7.4)"]
 jupyter = ["ipython (>=7.8.0)", "tokenize-rt (>=3.2.0)"]
 uvloop = ["uvloop (>=0.15.2)"]
 
-[package.source]
-type = "legacy"
-url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
-
 [[package]]
 name = "bump2version"
 version = "1.0.1"
@@ -55,7 +50,7 @@ python-versions = ">=3.5"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "cachecontrol"
@@ -77,7 +72,7 @@ redis = ["redis (>=2.10.5)"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "cachy"
@@ -95,7 +90,7 @@ redis = ["redis (>=3.3.6,<4.0.0)"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "certifi"
@@ -108,7 +103,7 @@ python-versions = ">=3.6"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "cffi"
@@ -124,7 +119,7 @@ pycparser = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "cfgv"
@@ -137,7 +132,7 @@ python-versions = ">=3.6.1"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "charset-normalizer"
@@ -153,7 +148,7 @@ unicode-backport = ["unicodedata2"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "cleo"
@@ -170,7 +165,7 @@ pylev = ">=1.3.0,<2.0.0"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "click"
@@ -186,7 +181,7 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "colorama"
@@ -199,7 +194,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "commonmark"
@@ -215,7 +210,7 @@ test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "coverage"
@@ -234,7 +229,7 @@ toml = ["tomli"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "crashtest"
@@ -247,7 +242,7 @@ python-versions = ">=3.6,<4.0"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "cryptography"
@@ -271,7 +266,7 @@ test = ["hypothesis (>=1.11.4,!=3.79.2)", "iso8601", "pretend", "pytest (>=6.2.0
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "distlib"
@@ -284,7 +279,7 @@ python-versions = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "docutils"
@@ -293,11 +288,6 @@ description = "Docutils -- Python Documentation Utilities"
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-
-[package.source]
-type = "legacy"
-url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
 
 [[package]]
 name = "dulwich"
@@ -319,7 +309,7 @@ pgp = ["gpg"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "filelock"
@@ -336,7 +326,7 @@ testing = ["covdefaults (>=2.2)", "coverage (>=6.4.2)", "pytest (>=7.1.2)", "pyt
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "html5lib"
@@ -359,7 +349,7 @@ lxml = ["lxml"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "identify"
@@ -375,7 +365,7 @@ license = ["ukkonen"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "idna"
@@ -388,7 +378,7 @@ python-versions = ">=3.5"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "importlib-metadata"
@@ -409,7 +399,7 @@ testing = ["flake8 (<5)", "flufl.flake8", "importlib-resources (>=1.3)", "packag
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "inflection"
@@ -422,7 +412,7 @@ python-versions = ">=3.5"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "iniconfig"
@@ -435,7 +425,7 @@ python-versions = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "isort"
@@ -450,11 +440,6 @@ colors = ["colorama (>=0.4.3,<0.5.0)"]
 pipfile-deprecated-finder = ["pipreqs", "requirementslib"]
 plugins = ["setuptools"]
 requirements-deprecated-finder = ["pip-api", "pipreqs"]
-
-[package.source]
-type = "legacy"
-url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
 
 [[package]]
 name = "jaraco-classes"
@@ -474,7 +459,7 @@ testing = ["flake8 (<5)", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-chec
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "jeepney"
@@ -491,7 +476,7 @@ trio = ["async_generator", "trio"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "jsonschema"
@@ -512,7 +497,7 @@ format-nongpl = ["fqdn", "idna", "isoduration", "jsonpointer (>1.13)", "rfc3339-
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "keyring"
@@ -536,7 +521,7 @@ testing = ["flake8 (<5)", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-chec
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "more-itertools"
@@ -549,7 +534,7 @@ python-versions = ">=3.7"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "msgpack"
@@ -562,7 +547,7 @@ python-versions = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "mypy-extensions"
@@ -575,7 +560,7 @@ python-versions = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "nodeenv"
@@ -591,7 +576,7 @@ setuptools = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "packaging"
@@ -607,7 +592,7 @@ pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pastel"
@@ -620,7 +605,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pathspec"
@@ -633,7 +618,7 @@ python-versions = ">=3.7"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pexpect"
@@ -649,7 +634,7 @@ ptyprocess = ">=0.5"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pip"
@@ -658,11 +643,6 @@ description = "The PyPA recommended tool for installing Python packages."
 category = "dev"
 optional = false
 python-versions = ">=3.7"
-
-[package.source]
-type = "legacy"
-url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
 
 [[package]]
 name = "pkginfo"
@@ -678,7 +658,7 @@ testing = ["coverage", "nose"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "platformdirs"
@@ -695,7 +675,7 @@ test = ["appdirs (==1.4.4)", "pytest (>=6)", "pytest-cov (>=2.7)", "pytest-mock 
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pluggy"
@@ -712,7 +692,7 @@ testing = ["pytest", "pytest-benchmark"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "poethepoet"
@@ -728,11 +708,6 @@ tomli = ">=1.2.2"
 
 [package.extras]
 poetry-plugin = ["poetry (>=1.0,<2.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
 
 [[package]]
 name = "poetry"
@@ -766,11 +741,6 @@ urllib3 = ">=1.26.0,<2.0.0"
 virtualenv = ">=20.4.3,<20.4.5 || >20.4.5,<20.4.6 || >20.4.6"
 xattr = {version = ">=0.9.7,<0.10.0", markers = "sys_platform == \"darwin\""}
 
-[package.source]
-type = "legacy"
-url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
-
 [[package]]
 name = "poetry-core"
 version = "1.3.2"
@@ -782,7 +752,7 @@ python-versions = ">=3.7,<4.0"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "poetry-plugin-bump2version"
@@ -802,7 +772,7 @@ typing-extensions = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "poetry-plugin-export"
@@ -819,7 +789,7 @@ poetry-core = ">=1.1.0,<2.0.0"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pre-commit"
@@ -837,11 +807,6 @@ pyyaml = ">=5.1"
 toml = "*"
 virtualenv = ">=20.0.8"
 
-[package.source]
-type = "legacy"
-url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
-
 [[package]]
 name = "ptyprocess"
 version = "0.7.0"
@@ -853,7 +818,7 @@ python-versions = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "py"
@@ -866,7 +831,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pycparser"
@@ -879,7 +844,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pydantic"
@@ -899,7 +864,7 @@ email = ["email-validator (>=1.0.3)"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pydocstyle"
@@ -919,7 +884,7 @@ toml = ["toml"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pygments"
@@ -932,11 +897,6 @@ python-versions = ">=3.6"
 [package.extras]
 plugins = ["importlib-metadata"]
 
-[package.source]
-type = "legacy"
-url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
-
 [[package]]
 name = "pylev"
 version = "1.4.0"
@@ -948,7 +908,7 @@ python-versions = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pyparsing"
@@ -964,7 +924,7 @@ diagrams = ["jinja2", "railroad-diagrams"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pyrsistent"
@@ -977,7 +937,7 @@ python-versions = ">=3.7"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pytest"
@@ -999,11 +959,6 @@ tomli = ">=1.0.0"
 [package.extras]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
-[package.source]
-type = "legacy"
-url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
-
 [[package]]
 name = "pytest-cov"
 version = "4.0.0"
@@ -1019,11 +974,6 @@ pytest = ">=4.6"
 [package.extras]
 testing = ["fields", "hunter", "process-tests", "pytest-xdist", "six", "virtualenv"]
 
-[package.source]
-type = "legacy"
-url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
-
 [[package]]
 name = "pywin32-ctypes"
 version = "0.2.0"
@@ -1035,7 +985,7 @@ python-versions = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "pyyaml"
@@ -1048,7 +998,7 @@ python-versions = ">=3.6"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "requests"
@@ -1071,7 +1021,7 @@ use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "requests-toolbelt"
@@ -1087,7 +1037,7 @@ requests = ">=2.0.1,<3.0.0"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "rich"
@@ -1107,7 +1057,7 @@ jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "rstcheck"
@@ -1129,11 +1079,6 @@ docs = ["m2r2 (>=0.3.2)", "sphinx", "sphinx-autobuild (==2021.3.14)", "sphinx-cl
 sphinx = ["sphinx"]
 testing = ["coverage-conditional-plugin (>=0.5)", "coverage[toml] (>=6.0)", "pytest (>=6.0)", "pytest-cov (>=3.0)", "pytest-randomly (>=3.0)", "pytest-sugar (>=0.9.5)"]
 toml = ["tomli"]
-
-[package.source]
-type = "legacy"
-url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
 
 [[package]]
 name = "rstcheck-core"
@@ -1157,7 +1102,7 @@ toml = ["tomli (>=2.0,<3.0)"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "secretstorage"
@@ -1174,7 +1119,7 @@ jeepney = ">=0.6"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "setuptools"
@@ -1192,7 +1137,7 @@ testing-integration = ["build[virtualenv]", "filelock (>=3.4.0)", "jaraco.envs (
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "shellingham"
@@ -1205,7 +1150,7 @@ python-versions = ">=3.4"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "six"
@@ -1218,7 +1163,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "snowballstemmer"
@@ -1231,7 +1176,7 @@ python-versions = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "toml"
@@ -1244,7 +1189,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "tomli"
@@ -1257,7 +1202,7 @@ python-versions = ">=3.7"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "tomlkit"
@@ -1270,7 +1215,7 @@ python-versions = ">=3.6,<4.0"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "tox"
@@ -1293,11 +1238,6 @@ virtualenv = ">=16.0.0,<20.0.0 || >20.0.0,<20.0.1 || >20.0.1,<20.0.2 || >20.0.2,
 [package.extras]
 docs = ["pygments-github-lexers (>=0.0.5)", "sphinx (>=2.0.0)", "sphinxcontrib-autoprogram (>=0.1.5)", "towncrier (>=18.5.0)"]
 testing = ["flaky (>=3.4.0)", "freezegun (>=0.3.11)", "pathlib2 (>=2.3.3)", "psutil (>=5.6.1)", "pytest (>=4.0.0)", "pytest-cov (>=2.5.1)", "pytest-mock (>=1.10.0)", "pytest-randomly (>=1.0.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
 
 [[package]]
 name = "typer"
@@ -1322,7 +1262,7 @@ test = ["black (>=22.3.0,<23.0.0)", "coverage (>=5.2,<6.0)", "isort (>=5.0.6,<6.
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "types-docutils"
@@ -1335,7 +1275,7 @@ python-versions = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "typing-extensions"
@@ -1348,7 +1288,7 @@ python-versions = ">=3.7"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "urllib3"
@@ -1366,7 +1306,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "virtualenv"
@@ -1388,7 +1328,7 @@ testing = ["coverage (>=6.2)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "webencodings"
@@ -1401,7 +1341,7 @@ python-versions = "*"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "xattr"
@@ -1417,7 +1357,7 @@ cffi = ">=1.0"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [[package]]
 name = "zipp"
@@ -1434,12 +1374,12 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [package.source]
 type = "legacy"
 url = "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple"
-reference = "tools"
+reference = "codeartifact"
 
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11.0"
-content-hash = "286fef4a4ffe6a066f2ab9ed14517cf04c7ca9495a1471d60c32c7eb859d9d67"
+content-hash = "95e653f8e393e5d02245c63538739bdcb24a785600f1cce4f1a940bb66237e4a"
 
 [metadata.files]
 attrs = [
