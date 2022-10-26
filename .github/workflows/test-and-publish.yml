@@ -85,11 +85,7 @@ jobs:
         poetry config repo.codeartifact ${AWS_CODEARTIFACT_GRE}
         poetry config http-basic.codeartifact aws ${AWS_CODEARTIFACT_GAT}
 
-        #poetry config --unset repos.codeartifactpublish || true
-        #poetry config repo.codeartifactpublish ${AWS_CODEARTIFACT_GRE}
-        #poetry config http-basic.codeartifactpublish aws ${AWS_CODEARTIFACT_GAT}
-
-        set | egrep -e '^(POETRY|PYTHON|AWS)'; poetry config --list; set | grep POETRY || true
+        set | egrep -e '^(POETRY|PYTHON|AWS)'; poetry config --list || true
 
     - name: Check poetry.lock
       run: poetry lock --check
@@ -189,18 +185,14 @@ jobs:
         poetry config repo.codeartifact ${AWS_CODEARTIFACT_GRE}
         poetry config http-basic.codeartifact aws ${AWS_CODEARTIFACT_GAT}
 
-        #poetry config --unset repos.codeartifactpublish || true
-        #poetry config repo.codeartifactpublish ${AWS_CODEARTIFACT_GRE}
-        #poetry config http-basic.codeartifactpublish aws ${AWS_CODEARTIFACT_GAT}
-
-        set | egrep -e '^(POETRY|PYTHON|AWS)'; poetry config --list; set | grep POETRY || true
+        set | egrep -e '^(POETRY|PYTHON|AWS)'; poetry config --list || true
 
     - name: Install dependencies
       run: |
         poetry env use ${{ matrix.python-version }}
         poetry install --with dev --no-ansi --no-interaction
 
-    - name: Build and poetry publish
+    - name: Poetry build and publish
       run: |
         poetry env use ${{ matrix.python-version }}
         poetry env info
