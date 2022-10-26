@@ -16,8 +16,8 @@
 
 """Validate Generator class."""
 import pytest
-from foremastutils.generator import Generator, GeneratorError
 
+from foremastutils.generator import Generator, GeneratorError
 
 PROJECTS = {
     "repo1": {

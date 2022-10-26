@@ -15,6 +15,7 @@
 #   limitations under the License.
 
 import pytest
+
 from foremastutils.formats import Formats
 
 FORMATS = {
