@@ -203,7 +203,7 @@ jobs:
     - name: Install dependencies
       run: |
         poetry env use ${{ matrix.python-version }}
-        poetry install --no-ansi --no-interaction
+        poetry install --with dev --no-ansi --no-interaction
 
     - name: Build and poetry publish
       run: |
