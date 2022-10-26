@@ -97,7 +97,7 @@ jobs:
     - name: Install dependencies
       run: |
         poetry env use ${{ matrix.python-version }}
-        poetry install --no-ansi --no-interaction
+        poetry install --with dev --no-ansi --no-interaction
 
     - name: Test with tox
       run: |
@@ -105,13 +105,6 @@ jobs:
         poetry env info
         pip list
         tox
-
-    - name: Build and poetry publish
-      run: |
-        poetry env use ${{ matrix.python-version }}
-        poetry env info
-        poetry build
-        poetry publish -r codeartifact
 
   publish:
     needs:
