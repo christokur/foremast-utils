@@ -104,6 +104,7 @@ jobs:
       run: |
         poetry env use ${{ matrix.python-version }}
         poetry env info
+        test ! -z "$(pip list | grep tox)" || pip install -r requirements-dev.txt
         pip list
         poetry run tox
 
